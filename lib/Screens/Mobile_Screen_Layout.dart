@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/colors.dart';
+import 'package:whatsapp_ui/widgets/contacts_list.dart';
 
 class MobileScreenLayout extends StatelessWidget {
   const MobileScreenLayout({super.key});
@@ -30,10 +31,14 @@ class MobileScreenLayout extends StatelessWidget {
             indicatorWeight: 3,
             labelColor: tabColor,
             labelStyle: TextStyle(fontWeight: FontWeight.bold),
-            tabs: [Tab(text: "CHATS"), Tab(text: "CHATS"), Tab(text: "CHATS")],
+            tabs: [
+              Tab(text: "CHATS"),
+              Tab(text: "GROUPS"),
+              Tab(text: "STATUS"),
+            ],
           ),
         ),
-        body: Text('body'),
+        body: ContactsList(),
       ),
     );
   }
